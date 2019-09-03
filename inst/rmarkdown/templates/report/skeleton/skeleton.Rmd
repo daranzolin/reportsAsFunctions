@@ -1,0 +1,43 @@
+---
+title: "Reports as Functions"
+output: 
+  html_document:
+    toc: true
+params:
+  species:
+    input: text
+    label: "Species"
+    value: "setosa"
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+
+d <- iris %>% filter(Species == params$species)
+```
+
+## Introduction
+
+Species: **`r params$species`**
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+
+## Overview {.tabset}
+
+### Chart
+
+```{r}
+ggplot(d, aes(Sepal.Length, Sepal.Width)) + geom_point()
+```
+
+### Table
+
+```{r}
+knitr::kable(d)
+```
+
+

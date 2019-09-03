@@ -1,0 +1,18 @@
+Package: reportsAsFunctions
+Title: Reports as Functions
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "David",
+           family = "Ranzolin",
+           role = c("aut", "cre"),
+           email = "daranzolin@gmail.com")
+Description: Example package demonstrating how to turn your reports into functions.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    ggplot2,
+    dplyr,
+    knitr,
+    rmarkdown
+RoxygenNote: 6.1.1
