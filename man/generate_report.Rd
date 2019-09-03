@@ -4,17 +4,16 @@
 \alias{generate_report}
 \title{Generate a report from template}
 \usage{
-generate_report(report_template_name, output_file = NULL, param_list,
-  see_now = FALSE)
+generate_report(template_name, output_file, param_list, see_now = FALSE)
 }
 \arguments{
-\item{report_template_name}{name of template.}
-
 \item{output_file}{name of the output file.}
 
 \item{param_list}{A list of named parameters.}
 
 \item{see_now}{Will launch browser if TRUE.}
+
+\item{report_template_name}{name of template.}
 }
 \value{
 invisible
